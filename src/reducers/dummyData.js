@@ -1,5 +1,5 @@
-export default {
-rawRecipes: [
+export default function() {
+  return [
     {
       name: 'Pumpkin Pie',
       image: '../../public/image/Pumpkin-pie-recipe.jpg',
@@ -43,6 +43,6 @@ rawRecipes: [
     }
   ]
 }
-  
+
   
   

@@ -5,8 +5,9 @@ import data from '../reducers/dummyData'
 import {
     Link
 } from "react-router-dom";
-import {bindActionCreator} from 'redux'
+import {bindActionCreators} from 'redux'
 import {connect} from 'react-redux'
+import {selectRecipe} from '../actions/action'
 
 class Recipes extends Component {
     // constructor(props) {
@@ -35,7 +36,7 @@ class Recipes extends Component {
                                     <div className='card-bod'>
                                    <Link><h5 class="card-title">{recipe.name}</h5> </Link> 
                                     </div>
-                                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit" onClick={this.addToCart}>Favorites</button>
+                                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit" onClick={()=>this.props.selectRecipe(recipe)}>Favorites</button>
                                     <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Details</button>
                                 </div>
                             </li>
@@ -50,4 +51,11 @@ function mapStateToProps(state){
         recipes: state.recipes
     }
 }
+// function mapDispatchToProps(dispatch){
+//     return bindActionCreators({
+//         selectRecipe: selectRecipe
+//     }, dispatch)
+
+    
+// }
 export default connect(mapStateToProps)(Recipes)
