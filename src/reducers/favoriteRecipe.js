@@ -1,10 +1,10 @@
-export default function (state = { recipe: [] }, action) {
+export default function (state = { favorite: [] }, action) {
     
     switch (action.type) {
       case "RECIPE_SELECTED":
         return {
           ...state,
-          recipe: [...state.recipe, action.payload]
+          favorite: [...state.favorite, action.payload]
         }
         break;
       default:

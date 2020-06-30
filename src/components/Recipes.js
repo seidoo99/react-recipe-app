@@ -51,11 +51,11 @@ function mapStateToProps(state){
         recipes: state.recipes
     }
 }
-// function mapDispatchToProps(dispatch){
-//     return bindActionCreators({
-//         selectRecipe: selectRecipe
-//     }, dispatch)
+function mapDispatchToProps(dispatch){
+    return bindActionCreators({
+        selectRecipe: selectRecipe
+    }, dispatch)
 
     
-// }
-export default connect(mapStateToProps)(Recipes)
+}
+export default connect(mapStateToProps, mapDispatchToProps)(Recipes)

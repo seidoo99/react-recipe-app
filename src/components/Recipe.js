@@ -24,7 +24,7 @@ class Recipe extends Component {
 }
 function mapStateToProps(state){
     return {
-        data: state.a
+       recipe: state.recipe
     }
 }
 export default connect(mapStateToProps)(Recipe);
