@@ -34,7 +34,7 @@ class Recipes extends Component {
                                 <div className='card'>
                                     <a><img className="card-img-top" id='image' src={recipe.image} /></a>
                                     <div className='card-bod'>
-                                   <Link><h5 class="card-title">{recipe.name}</h5> </Link> 
+                                    <h5 class="card-title">{recipe.name}</h5>
                                     </div>
                                     <button class="btn btn-outline-success my-2 my-sm-0" type="submit" onClick={()=>this.props.selectRecipe(recipe)}>Favorites</button>
                                     <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Details</button>
@@ -48,7 +48,8 @@ class Recipes extends Component {
 }
 function mapStateToProps(state){
     return {
-        recipes: state.recipes
+        recipes: state.recipes,
+    
     }
 }
 function mapDispatchToProps(dispatch){

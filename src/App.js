@@ -19,6 +19,7 @@ function App() {
     <Route path='/' exact component={Home}/>
 	<Route path='/Recipes' exact component={Recipes}/>
 	<Route path='/favourite' exact component={Favourite}/>
+	<Route path='/Recipes/:id' exact component={Favourite}/>
     </div>
     </Router>
   );

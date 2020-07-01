@@ -2,7 +2,7 @@ export default function() {
   return [
     {
       name: 'Pumpkin Pie',
-      image: '../../public/image/Pumpkin-pie-recipe.jpg',
+      image: '../public/image/Pumpkin-pie-recipe.jpg',
       ingredients: [
         'Pumpkin Puree',
         'Sweetened Condensed Milk',
@@ -10,7 +10,7 @@ export default function() {
         'Pumpkin Pie Spice',
         'Pie Crust'
       ], 
-      id:1
+      id:1 
     },
     {
       name: 'Spaghetti',
@@ -51,7 +51,7 @@ export default function() {
         'Pumpkin Pie Spice',
         'Pie Crust'
       ], 
-      id:1
+      id:4
     },
     {
       name: 'Spaghetti',
@@ -70,17 +70,17 @@ export default function() {
         step5: ''
       }
     ],
-    id: 2
+    id: 5
     },
     {
       name: 'Onion Pie',
-      image:'../../public/image/Onion-Pie.jpg',
+      image:'/public/image/Onion-Pie.jpg',
       ingredients: [
         'Onion',
         'Pie Crust',
         'Sounds Yummy right?'
       ],
-      id: 3
+      id: 6
     }
   ]
 }

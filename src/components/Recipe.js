@@ -5,26 +5,28 @@ import {connect} from 'react-redux'
 
 class Recipe extends Component {
 
-    createRecipe() {
-        return this.props.data.map((recipe => {
-              return (
-                  <li>{recipe.name}</li>
-              )
-        })
-
-        )
-    }
+    // createRecipe() {
+        
+    //           return (
+    //               <li></li>
+    //           )
+    // }
     render() {
         return (
             <ul>
-                {this.createRecipe}
+                {this.props.detail }}
             </ul>
         )
     }
 }
-function mapStateToProps(state){
-    return {
-       recipe: state.recipe
-    }
-}
+// function mapStateToProps(state){
+//     return {
+//        detail: state.detail
+//     }
+// }
+
+// function mapDispatchToProps(dispatch){
+//     return bindActionCreators({
+//         selectRecipe: selectRecipe
+//     }, dispatch)
 export default connect(mapStateToProps)(Recipe);

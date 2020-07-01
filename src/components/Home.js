@@ -9,34 +9,13 @@ import {
 
 class Home extends Component {
     render() {
-
-        return (
-            <ul class="nav justify-content-center">
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Recipes</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">AddRecipe</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Favourites</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Recipe</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">about</a>
-                </li>
-                
-</ul>
-        )
         return (
             <Route>
-                <nav class="navbar navbar-light bg-light justify-content-between">
+                <nav className="navbar navbar-light bg-light justify-content-between">
                 <Link to='Recipes'>Recipes</Link>
                 <Link to="NewRecipes">AddRecipe</Link>
                 <Link to="About">about</Link>
-                <Link to="Recipe">Recipe</Link>
+                <Link to="Recipes/:id">Recipe</Link>
                 <Link to="favourite">Favourites</Link>
 
                     <form class="form-inline">

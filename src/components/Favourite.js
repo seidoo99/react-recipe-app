@@ -7,6 +7,7 @@ import {
 import {bindActionCreators} from 'redux'
 import {connect} from 'react-redux'
 import {selectRecipe} from '../actions/action'
+import {removeRecipe} from '../actions/action'
 
 class Favorite extends Component {
     // constructor(props) {
@@ -35,7 +36,7 @@ class Favorite extends Component {
                                     <div className='card-bod'>
                                  <h5 class="card-title">{fav.name}</h5>
                                     </div>
-                                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">remove</button>
+                                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit" onClick={()=>this.props.removeRecipe(fav)}>remove</button>
                                     {/*<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Details</button>*/}
                                 </div>
                             </li>
@@ -47,14 +48,15 @@ class Favorite extends Component {
 }
 function mapStateToProps(state){
     return {
-        favorite: state.favorites.favorite
+        favorite: state.favorites.favorite,
+        // remove: state.favorites.remove
     }
 }
-// function mapDispatchToProps(dispatch){
-//     return bindActionCreators({
-//         selectRecipe: selectRecipe
-//     }, dispatch)
+function mapDispatchToProps(dispatch){
+    return bindActionCreators({
+        removeRecipe: removeRecipe
+    }, dispatch)
 
     
-// }
-export default connect(mapStateToProps)(Favorite)
+}
+export default connect(mapStateToProps,mapDispatchToProps)(Favorite)
