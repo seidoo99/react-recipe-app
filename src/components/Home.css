@@ -1,4 +1,4 @@
-/* .sidenav {
+.sidenav {
     height: 100%;
     width: 15%;
     position: fixed;
@@ -20,4 +20,4 @@
 
 .sidenav a:hover {
     color: #f1f1f1;
-} */
+}

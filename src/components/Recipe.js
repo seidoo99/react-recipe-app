@@ -14,7 +14,7 @@ class Recipe extends Component {
     render() {
         return (
             <ul>
-                {this.props.detail }}
+                {this.props.detail }
             </ul>
         )
     }

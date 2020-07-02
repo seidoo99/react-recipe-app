@@ -2,7 +2,7 @@ export default function() {
   return [
     {
       name: 'Pumpkin Pie',
-      image: '../public/image/Pumpkin-pie-recipe.jpg',
+      image: './image/Pumpkin-pie-recipe.jpg',
       ingredients: [
         'Pumpkin Puree',
         'Sweetened Condensed Milk',
@@ -14,7 +14,7 @@ export default function() {
     },
     {
       name: 'Spaghetti',
-      image:'../../public/image/sphagetti.jpg',
+      image:'./image/sphagetti.jpg',
       ingredients: [
         'Noodles',
         'Tomato Sauce',
@@ -33,7 +33,7 @@ export default function() {
     },
     {
       name: 'Onion Pie',
-      image:'../../public/image/Onion-Pie.jpg',
+      image:'./image/Onion-Pie.jpg',
       ingredients: [
         'Onion',
         'Pie Crust',
@@ -43,7 +43,7 @@ export default function() {
     },
     {
       name: 'Pumpkin Pie',
-      image: '../../public/image/Pumpkin-pie-recipe.jpg',
+      image: './image/Pumpkin-pie-recipe.jpg',
       ingredients: [
         'Pumpkin Puree',
         'Sweetened Condensed Milk',
@@ -55,7 +55,7 @@ export default function() {
     },
     {
       name: 'Spaghetti',
-      image:'../../public/image/sphagetti.jpg',
+      image:'./image/sphagetti.jpg',
       ingredients: [
         'Noodles',
         'Tomato Sauce',
@@ -74,7 +74,7 @@ export default function() {
     },
     {
       name: 'Onion Pie',
-      image:'/public/image/Onion-Pie.jpg',
+      image:'./image/Onion-Pie.jpg',
       ingredients: [
         'Onion',
         'Pie Crust',
@@ -85,5 +85,3 @@ export default function() {
   ]
 }
 
-  
-  

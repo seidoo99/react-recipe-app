@@ -5,6 +5,7 @@ import data from '../reducers/dummyData'
 import {
     Link
 } from "react-router-dom";
+import './Recipes.css'
 import {bindActionCreators} from 'redux'
 import {connect} from 'react-redux'
 import {selectRecipe} from '../actions/action'
@@ -36,7 +37,7 @@ class Recipes extends Component {
                                     <div className='card-bod'>
                                     <h5 class="card-title">{recipe.name}</h5>
                                     </div>
-                                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit" onClick={()=>this.props.selectRecipe(recipe)}>Favorites</button>
+                                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit" onClick={()=>this.props.selectRecipe(recipe)}>Favorite</button>
                                     <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Details</button>
                                 </div>
                             </li>

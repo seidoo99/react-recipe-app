@@ -37,7 +37,7 @@ class Favorite extends Component {
                                  <h5 class="card-title">{fav.name}</h5>
                                     </div>
                                     <button class="btn btn-outline-success my-2 my-sm-0" type="submit" onClick={()=>this.props.removeRecipe(fav)}>remove</button>
-                                    {/*<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Details</button>*/}
+                                   <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Details</button>
                                 </div>
                             </li>
                         )}

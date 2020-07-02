@@ -14,9 +14,9 @@ class Home extends Component {
                 <nav className="navbar navbar-light bg-light justify-content-between">
                 <Link to='Recipes'>Recipes</Link>
                 <Link to="NewRecipes">AddRecipe</Link>
-                <Link to="About">about</Link>
                 <Link to="Recipes/:id">Recipe</Link>
-                <Link to="favourite">Favourites</Link>
+                <Link to="favourite">Favourite</Link>
+                <Link to="About">about</Link>
 
                     <form class="form-inline">
                         <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" />
