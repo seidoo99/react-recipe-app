@@ -1,16 +1,41 @@
 import React, { Component } from 'react'
-
+import {search} from '../actions/action'
+import {connect} from 'react-redux'
 class Search extends Component {
-    render() {
-        return (
-            <div>
-                <form onSubmit={this.props.getRecipe} style={{ marginBottom:"2rem" }}>
-                    <input className="form__input" type="text" name="recipeName" />
-                    <button className="form__button">Search</button>
-                </form>
-            </div>
-        )
-    }
+handleInput = e => {
+    e.preventDefault();
+}
+onChange = e => {
+    this.props.search(e.target.value)
+}
+render() {
+    return (
+        <div>
+            <form className="form-inline" style={{ marginBottom:"2rem" }} onSubmit={this.handleInput}>
+                <input className="form-control mr-sm-2" 
+                type="text" 
+                name="recipeName" 
+                onChange={this.onChange}
+                />
+                <button className="btn btn-outline-success">Search</button>
+            </form>
+        </div>
+    )
+}
 }
 
-export default Search
+// recipes.filter(name => {
+//     return name.name.toLowerCase().indexOf(filterText.toLowerCase()) > 0
+// }).map(name => {
+//     return (
+//         <li key={name.id}>{name.name}</li>
+//     )
+// })
+
+const mapStateToProps = state => ({
+value: state.recipes.value
+// recipes : search(state)
+})
+
+
+export default connect(mapStateToProps, {search})(Search)

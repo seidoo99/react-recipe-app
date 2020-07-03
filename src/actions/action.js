@@ -21,4 +21,10 @@ export const getRecipe = (recipe)=> {
         payload: recipe
      }
 }
-
+export const search = (recipe)=> {
+    console.log('you clicked on recipe');
+    return {
+        type: 'SEARCH',
+        payload: recipe
+     }
+    }

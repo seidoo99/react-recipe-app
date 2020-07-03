@@ -9,7 +9,7 @@ import './Recipes.css'
 import {bindActionCreators} from 'redux'
 import {connect} from 'react-redux'
 import {selectRecipe} from '../actions/action'
-
+import Search from './Search'
 class Recipes extends Component {
     // constructor(props) {
     //     super(props)
@@ -27,6 +27,7 @@ class Recipes extends Component {
         return (
             <div  >
                 <Home />
+                <Search/>
 
                 <ul className="card-deck">
                     {
@@ -37,8 +38,8 @@ class Recipes extends Component {
                                     <div className='card-bod'>
                                     <h5 class="card-title">{recipe.name}</h5>
                                     </div>
-                                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit" onClick={()=>this.props.selectRecipe(recipe)}>Favorite</button>
-                                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Details</button>
+                                    <Link class="btn btn-outline-success my-2 my-sm-0" type="submit" onClick={()=>this.props.selectRecipe(recipe)}>Favorite recipe</Link>
+                                    <Link to = {`/Recipe/${recipe.id}`}class="btn btn-outline-success my-2 my-sm-0" type="submit">Recipe Details</Link>
                                 </div>
                             </li>
                         )}
