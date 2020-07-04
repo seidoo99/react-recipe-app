@@ -9,9 +9,7 @@ import About from './components/About'
 import RecipeForm from './components/RecipeForm'
 import {
   BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
+  Route
 } from "react-router-dom";
 import favoriteRecipe from './reducers/favoriteRecipe';
 
