@@ -29,6 +29,8 @@ class Recipe extends Component {
     render() {
         return (
             <div>
+            <h1>Recipe details</h1>
+                <Link to="/">Back To Recipes</Link>
                 <ul className="card-deck">
                         <li>
                             <div className='card'>

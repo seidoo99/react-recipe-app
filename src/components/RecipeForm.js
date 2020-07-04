@@ -7,7 +7,10 @@ class RecipeForm extends Component {
   render() {
     return (
       <div id="addRecipeForm" className="hidden">
-        <input type="text" ref="recipeName" placeholder="Recipe name" /><br />
+      <br/>
+        <input type="text" ref="recipeName" placeholder="Recipe name" />
+        <br />
+        <br/>
         <textarea rows="5" ref="ingridients" placeholder="Ingridients"></textarea><br />
         <button onClick={() => {
           if (this.refs.recipeName.value !== '' && this.refs.ingridients.value !== '') {

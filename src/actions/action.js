@@ -26,7 +26,7 @@ export const searchRecipe = (value= '')=> {
     console.log('you clicked on recipe');
     return {
         type: 'SEARCH',
-        payload: value
+        value: value
      }
     }
     export const addRecipe = (recipeName, recipeIngridients) => ({

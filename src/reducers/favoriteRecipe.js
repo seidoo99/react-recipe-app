@@ -20,8 +20,8 @@ export default function (state = { favorite: [] , recipes: []}, action) {
         }
 
       case "SEARCH": 
-        let value = action.payload.value;
-        let filteredValues = state.recipes.filter(recipe => {
+        const value = action.payload.value;
+        const filteredValues = state.recipes.filter(recipe => {
           return recipe.name.toLowerCase().includes(value) 
       });
         return {

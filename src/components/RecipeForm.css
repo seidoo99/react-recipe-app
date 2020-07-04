@@ -1,17 +1,22 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway');
+body {
+    margin: auto;
+}
+
 input,
 textarea {
-    margin-left: 20px;
+    margin-left: 0px;
+    align-self: auto;
 }
 
 input {
     padding: 10px;
     font-size: 16pt;
-    width: 60%;
+    width: 100%;
 }
 
 textarea {
-    width: 80%;
+    width: 200%;
     font-size: 16pt;
     border: 1px solid #222;
     padding: 15px;

@@ -4,14 +4,15 @@ import './index.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import App from './App'
 import * as serviceWorker from './serviceWorker';
-import {createStore} from 'redux'
+import {createStore, applyMiddleware} from 'redux'
 import allReducers from './reducers/combinedReducer'
 import {Provider} from 'react-redux'
-
-
+import thunk from 'redux-thunk'
  
+const middleware = [thunk];
+
   const store = createStore(allReducers,
-    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
+    applyMiddleware(...middleware));
 ReactDOM.render(
   <React.StrictMode>
   <Provider store={store}>

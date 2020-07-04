@@ -8,7 +8,7 @@ export class Search extends Component {
   
    filterByInput(e){
     let input = e.target.value;
-    this.props.dispatch(searchRecipe({value: input}))
+    this.props.recipes.dispatch(searchRecipe({value: input}))
  }
 
 
