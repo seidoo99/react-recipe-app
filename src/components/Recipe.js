@@ -29,15 +29,28 @@ class Recipe extends Component {
     render() {
         return (
             <div>
-               <h3>{this.state.recipe.name}</h3>
-                <h4>{this.state.recipe.calories}</h4> 
-                <div>
-                   {/* <ul>
-                    {this.state.recipe.ingredients.map((ingredient,i)=> 
-                        <li key={i}>{ingredient}</li>
-                  )}
-                    </ul>*/}
-                    </div>
+                <ul className="card-deck">
+                        <li>
+                            <div className='card'>
+                                <div className='card-bod'>
+                                <h5 class="card-title">Recipe name: {this.state.recipe.name}</h5>
+                                <h5 class="card-title">Calories: {this.state.recipe.calories}</h5>
+                                <ul>
+                                <h5>Ingredients :</h5>
+                                
+                                <li>2 teaspoons cumin seeds</li>
+                                <li>1 teaspoon cracked black peppercorns</li>
+                                <li>2 teaspoons dried oregano</li>
+                                <li>1/2 cup plus 1 tablespoon olive oil</li>
+                               <li>1 clove garlic, minced</li>
+
+                                
+                                </ul>
+                                </div>
+                            </div>
+                        </li>
+                  
+            </ul>
             </div>
         )
     }

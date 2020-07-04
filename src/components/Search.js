@@ -1,31 +1,28 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import {
-  searchRecipe, getRecipes
+  searchRecipe
 } from '../actions/action';
 
 export class Search extends Component {
-  onChange = e => {
-    this.props.searchRecipe(e.target.value);
-  };
+  
+   filterByInput(e){
+    let input = e.target.value;
+    this.props.dispatch(searchRecipe({value: input}))
+ }
 
-  onSubmit = e => {
-    e.preventDefault();
-    this.props.getRecipes(this.props.text);
-
-  };
 
   render() {
     return (
       <div className="jumbotron jumbotron-fluid mt-5 text-center">
         <div className="container">
-          <form id="searchForm" onSubmit={this.onSubmit}>
+          <form id="searchForm">
             <input
               type="text"
               className="form-control"
               name="searchText"
               placeholder="search_recipes"
-              onChange={this.onChange}
+              onChange = { e => {this.filterByInput(e)}}
             />
             <button type="submit" className="btn btn-primary btn-bg mt-3">
               Search
@@ -38,10 +35,10 @@ export class Search extends Component {
 }
 
 const mapStateToProps = state => ({
-  text: state.recipes.text
+  recipes: state.recipes
 });
 
 export default connect(
   mapStateToProps,
-  { searchRecipe, getRecipes, }
+  { searchRecipe }
 )(Search);

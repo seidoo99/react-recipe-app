@@ -1,38 +1,34 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
-
+import React, {Component} from 'react'
+import {bindActionCreators} from 'redux'
+import {connect} from 'react-redux'
+import {addRecipe} from '../actions/action'
+import './RecipeForm.css'
 class RecipeForm extends Component {
-
   render() {
-
     return (
-      <div>
-        <h1 className="recipeName">Create a New Recipe</h1>
-    
-      <form >
-        <div>
-          <label htmlFor="name">Name:</label>
-          <input
-            type="text"
-            name="name"
-            value=""
-          />
-        </div>
-
-        <div>
-          <label htmlFor="ingredients">Ingredients:</label>
-          <textarea
-            type="text"
-            name="ingredients"
-            value=""
-          />
-          <button type="submit">Add Recipe</button>
-        </div>
-      </form>
+      <div id="addRecipeForm" className="hidden">
+        <input type="text" ref="recipeName" placeholder="Recipe name" /><br />
+        <textarea rows="5" ref="ingridients" placeholder="Ingridients"></textarea><br />
+        <button onClick={() => {
+          if (this.refs.recipeName.value !== '' && this.refs.ingridients.value !== '') {
+            this.props.addRecipe(this.refs.recipeName.value, this.refs.ingridients.value, false, false)
+            this.refs.recipeName.value = ''
+            this.refs.ingridients.value = ''
+          } else {
+            alert('All fields are required to proceed')
+          }
+        }}>Add recipe</button><br />
+        <button onClick={() => {
+          this.refs.recipeName.value = ''
+          this.refs.ingridients.value = ''
+        }}>Cancel</button>
       </div>
     )
   }
 }
 
+const mapDispatchToProps = (dispatch) => {
+  return bindActionCreators({addRecipe}, dispatch)
+}
 
-export default RecipeForm;
+export default connect(() => {}, mapDispatchToProps)(RecipeForm)

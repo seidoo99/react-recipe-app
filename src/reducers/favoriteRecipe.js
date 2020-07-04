@@ -1,4 +1,4 @@
-export default function (state = { favorite: [] , text: '', recipes: []}, action) {
+export default function (state = { favorite: [] , recipes: []}, action) {
     
     switch (action.type) {
       case "RECIPE_SELECTED":
@@ -16,34 +16,28 @@ export default function (state = { favorite: [] , text: '', recipes: []}, action
       // const id = action.payload.id
         return {
             ...state,
-            detail: state.favorite.filter((recipe) => recipe.id == id)
+            detail: state.favorite.filter((recipe) => recipe.id === id)
         }
 
-      // case "SEARCH": 
-      //   let value = action.payload.value;
-      //   let filteredValues = state.recipes.filter(recipe => {
-      //     return recipe.name.toLowerCase().includes(value) 
-      // });
-      //   return {
-      //     ...state,
-      //     recipes:filteredValues
-          
-      //   }
-      case "SEARCH":
+      case "SEARCH": 
+        let value = action.payload.value;
+        let filteredValues = state.recipes.filter(recipe => {
+          return recipe.name.toLowerCase().includes(value) 
+      });
         return {
           ...state,
-          text: action.payload,
+          recipes:filteredValues
           
-        };
+        }
+        case "ADD_RECIPE":
+        return {
+          ...state, 
+        recipes: [...state.recipes, [action.name, action.ingridients, action.visible, action.shown]]
+        }
+        
 
-        case "GET_RECIPE":
-            return {
-              ...state,
-              movies: action.payload,
-              loading: false
-            };
-      default:
-        return state
+        default: 
+        return state 
+      }
+
     }
-  
-  }

@@ -60,7 +60,6 @@ export default function() {
       image:'./image/Onion-Pie.jpg',
       calories:2458,
       ingredients: [
-        'For the cumin vinaigrette',
         '2 teaspoons cumin seeds',
         '1 teaspoon cracked black peppercorns',
         '2 teaspoons dried oregano',
