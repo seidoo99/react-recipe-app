@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 import Home from './Home'
 import data from '../reducers/dummyData'
 import {
-    Link
+    Link, Route
 } from "react-router-dom";
 import './Recipes.css'
 import {bindActionCreators} from 'redux'
@@ -25,9 +25,20 @@ class Recipes extends Component {
     
     render() {
         return (
+        
             <div  >
-                <Home />
-                <Search/>
+
+            <Route>
+            <nav className="navbar">
+            <Link to='Recipes'>Recipes</Link>
+            <Link to="NewRecipes">AddRecipe</Link>
+            <Link to="Recipes/id">Recipe</Link>
+            <Link to="favourite">Favourite</Link>
+            <Link to="About">about</Link>
+            </nav> 
+            </Route>
+        
+            <Search/>
 
                 <ul className="card-deck">
                     {

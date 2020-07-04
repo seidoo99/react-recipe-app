@@ -1,4 +1,4 @@
-.sidenav {
+/* .sidenav {
     height: 100%;
     width: 15%;
     position: fixed;
@@ -20,4 +20,12 @@
 
 .sidenav a:hover {
     color: #f1f1f1;
+} */
+
+.nav {
+    justify-content: space space-between;
+}
+
+a {
+    justify-content: space space-between;
 }

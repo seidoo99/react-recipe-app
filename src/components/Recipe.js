@@ -29,9 +29,15 @@ class Recipe extends Component {
     render() {
         return (
             <div>
-            <ul>
-                <li>{this.state.recipe.name}</li>
-            </ul>
+               <h3>{this.state.recipe.name}</h3>
+                <h4>{this.state.recipe.calories}</h4> 
+                <div>
+                   {/* <ul>
+                    {this.state.recipe.ingredients.map((ingredient,i)=> 
+                        <li key={i}>{ingredient}</li>
+                  )}
+                    </ul>*/}
+                    </div>
             </div>
         )
     }

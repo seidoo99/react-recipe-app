@@ -11,7 +11,7 @@ class Home extends Component {
     render() {
         return (
             <Route>
-                <nav className="navbar navbar-light bg-light justify-content-between">
+                <nav className="navbar">
                 <Link to='Recipes'>Recipes</Link>
                 <Link to="NewRecipes">AddRecipe</Link>
                 <Link to="Recipes/id">Recipe</Link>
@@ -23,6 +23,12 @@ class Home extends Component {
                         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
         </form>*/}
                 </nav>
+                 <div className="home">
+                <h1> Recipes! </h1>
+                <h3> a quick and easy app for managing recipes! </h3>
+                
+                  <img src="https://images.unsplash.com/photo-1478145046317-39f10e56b5e9?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=c7af156881360cd678f19062bd9c1f8a&auto=format&fit=crop&w=800&q=60" alt=""  />
+                </div>
             </Route>
         )
     }
