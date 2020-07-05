@@ -13,28 +13,11 @@ export default function (state = { favorite: [] , recipes: []}, action) {
             favorite: state.favorite.filter((recipe) => recipe.id !== id)
         }
       case "DETAIL_RECIPE" :
-      // const id = action.payload.id
+      
         return {
             ...state,
             detail: state.favorite.filter((recipe) => recipe.id === id)
         }
-
-      case "SEARCH": 
-        const value = action.payload.value;
-        const filteredValues = state.recipes.filter(recipe => {
-          return recipe.name.toLowerCase().includes(value) 
-      });
-        return {
-          ...state,
-          recipes:filteredValues
-          
-        }
-        // case "ADD_RECIPE":
-        // return {
-        //   ...state, 
-        // recipes: [...state.recipes, [action.name, action.ingridients, action.visible, action.shown]]
-        // }
-        
 
         default: 
         return state 

@@ -4,8 +4,8 @@ class Add extends Component {
 render() {
 return (
 <div className="post">
-  <h2 className="post_title">{this.props.recip.name}</h2>
-  <p className="post_message">{this.props.recip.Ingredients}</p>
+  <span className="post_title">recipe : {this.props.recip.name}</span>
+  <h5 className="post_message">Ingredients: <hr/>{this.props.recip.Ingredients}</h5>
   <div className="control-buttons">
     <button className="edit"
     onClick={() => this.props.dispatch({ type: 'EDIT_RECIPE', id: this.props.recip.id })

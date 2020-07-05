@@ -6,7 +6,7 @@ class AllRecipes extends Component {
 render() {
 return (
 <div>
-  <h1 className="post_heading">All Recipies</h1>
+  <h2 className="post_heading">list of custom Recipes</h2>
   {this.props.newRecipe.map((recip) => (
   <div key={recip.id}>
     {recip.editing ? <Edit recip={recip} key={recip.id} /> : <Add recip={recip}
@@ -20,7 +20,7 @@ return (
 
 const mapStateToProps = (state) => {
 return {
-newRecipe: state
+newRecipe: state.newRecipe
 }
 }
 export default connect(mapStateToProps)(AllRecipes);

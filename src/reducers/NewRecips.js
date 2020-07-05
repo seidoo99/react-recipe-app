@@ -11,8 +11,8 @@ const recipReducer = (state = [], action) => {
           if(recip.id === action.id) {
             return {
                ...recip,
-               title:action.data.newName,
-               message:action.data.newIngredient,
+               name:action.data.newName,
+               Ingredients:action.data.newIngredient,
                editing: !recip.editing
             }
           } else return recip;

@@ -3,6 +3,7 @@ export default function() {
     {
       name: 'Pumpkin Pie',
       image: './image/Pumpkin-pie-recipe.jpg',
+      calories:700,
       ingredients: [
         'Pumpkin Puree',
         'Sweetened Condensed Milk',
@@ -15,6 +16,7 @@ export default function() {
     {
       name: 'Spaghetti',
       image:'./image/sphagetti.jpg',
+      calories:400,
       ingredients: [
         'Noodles',
         'Tomato Sauce',

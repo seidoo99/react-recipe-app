@@ -17,7 +17,8 @@ import favoriteRecipe from './reducers/favoriteRecipe';
 
 function App() {
   return (
-    <Router >
+	<Router >
+
     <div className="App">
     <Route path='/' exact component={Home}/>
 	<Route path='/Recipes' exact component={Recipes}/>

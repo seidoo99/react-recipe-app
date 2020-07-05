@@ -9,37 +9,23 @@ import './Recipes.css'
 import {bindActionCreators} from 'redux'
 import {connect} from 'react-redux'
 import {selectRecipe} from '../actions/action'
-import Search from './Search'
+
 
 class Recipes extends Component {
-    // constructor(props) {
-    //     super(props)
-    
-    //     this.state = {
-    //          data
-    //     }
-    // }
-    
-    // addToFavorites = () => {
-    //     alert('Add To Favorites')
-    // }
+   
     
     render() {
-        return (
-        
+        return (      
             <div  >
-
             <Route>
             <nav className="navbar">
             <Link to='Recipes'>Recipes</Link>
-            <Link to="NewRecipes">AddRecipe</Link>
-            <Link to="Recipes/id">Recipe</Link>
+            <Link to="NewRecipes">Add Recipe</Link>
+            <Link to="AllRecipe">Custom Recipes</Link>
             <Link to="favourite">Favourite</Link>
             <Link to="About">about</Link>
             </nav> 
             </Route>
-        
-            <Search/>
 
                 <ul className="card-deck">
                     {

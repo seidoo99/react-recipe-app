@@ -12,11 +12,10 @@ class Home extends Component {
         return (
             <Route>
                 <nav className="navbar">
-                <Link to='Recipes'>Recipes</Link>
+                <Link to="Recipes">Recipes</Link>
                 <Link to="NewRecipes">AddRecipe</Link>
                 <Link to="favourite">Favourite</Link>
-                <Link to="singleRecipe">Recipe</Link>
-	            <Link to="AllRecipe" >All Recipe</Link>
+                <Link to="AllRecipe" >Custom Recipes</Link>
                 <Link to="About">about</Link>
 
                     {/*<form class="form-inline">

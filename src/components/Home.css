@@ -1,3 +1,7 @@
+nav {
+    background-color: grey;
+}
+
 .sidenav {
     height: 100%;
     width: 15%;
@@ -22,8 +26,9 @@
     color: #f1f1f1;
 }
 
-.nav {
+.navbar {
     justify-content: space space-between;
+    background-color: rgb(85, 60, 60);
 }
 
 a {
