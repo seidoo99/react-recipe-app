@@ -7,6 +7,8 @@ import Favourite from './components/Favourite'
 import Recipe from './components/Recipe';
 import About from './components/About'
 import RecipeForm from './components/RecipeForm'
+import AllRecipes from './components/AllRecipes'
+import Add from './components/Add'
 import {
   BrowserRouter as Router,
   Route
@@ -23,6 +25,8 @@ function App() {
 	<Route path='/Recipe/:id' exact component={Recipe}/>
 	<Route path='/About' exact component={About}/>
 	<Route path='/newRecipes' component={RecipeForm}/>
+	<Route path='/singleRecipe' exact component={Add}/>
+	<Route path='/AllRecipe' exact component={AllRecipes}/>
     </div>
     </Router>
   );

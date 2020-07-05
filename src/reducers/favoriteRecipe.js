@@ -29,11 +29,11 @@ export default function (state = { favorite: [] , recipes: []}, action) {
           recipes:filteredValues
           
         }
-        case "ADD_RECIPE":
-        return {
-          ...state, 
-        recipes: [...state.recipes, [action.name, action.ingridients, action.visible, action.shown]]
-        }
+        // case "ADD_RECIPE":
+        // return {
+        //   ...state, 
+        // recipes: [...state.recipes, [action.name, action.ingridients, action.visible, action.shown]]
+        // }
         
 
         default: 

@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import {Link,  withRouter} from "react-router-dom";
 import {connect} from 'react-redux'
-import axios from 'axios'
+
 class Recipe extends Component {
   constructor (props) {
       super(props)
@@ -31,6 +31,7 @@ class Recipe extends Component {
             <div>
             <h1>Recipe details</h1>
                 <Link to="/">Back To Recipes</Link>
+                
                 <ul className="card-deck">
                         <li>
                             <div className='card'>

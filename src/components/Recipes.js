@@ -10,6 +10,7 @@ import {bindActionCreators} from 'redux'
 import {connect} from 'react-redux'
 import {selectRecipe} from '../actions/action'
 import Search from './Search'
+
 class Recipes extends Component {
     // constructor(props) {
     //     super(props)
@@ -55,6 +56,8 @@ class Recipes extends Component {
                             </li>
                         )}
                 </ul>
+                
+
             </div>
         )
     }
