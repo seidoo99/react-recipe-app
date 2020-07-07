@@ -18,7 +18,7 @@ class Favorite extends Component {
                 <Link to="NewRecipes">AddRecipe</Link>
                 <Link to="favourite">Favourite</Link>
                 <Link to="AllRecipe" >Custom Recipes</Link>
-                <Link to="About">about</Link>
+                <Link to="About">About</Link>
                 </nav>
             </Route>
                 <h1>Your favourite Recipes</h1>
