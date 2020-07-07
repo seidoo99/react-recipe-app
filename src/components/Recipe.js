@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import {Link,  withRouter} from "react-router-dom";
+import {Link} from "react-router-dom";
 import {connect} from 'react-redux'
 import './Recipe.css'
 
@@ -33,6 +33,7 @@ class Recipe extends Component {
                                 <div className='card-bod'>
                                         <h5 class="card-title">Recipe name: {this.state.recipe.name}</h5>
                                         <h5 class="card-title">Calories: {this.state.recipe.calories}</h5>
+                                        <a><img className="card-img-top" id='image' src={this.state.recipe.image} /></a>
                                         <h5>Ingredients :</h5>
                                 <ul>
                                     <li>2 teaspoons cumin seeds</li>

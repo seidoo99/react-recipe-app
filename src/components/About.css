@@ -65,7 +65,7 @@ body {
     display: inline-block;
 }
 
-#social-fb:hover {
+#social-ln:hover {
     color: #3B5998;
     transition: all .001s;
 }
@@ -81,6 +81,11 @@ body {
 }
 
 #social-em:hover {
+    color: #f39c12;
+    transition: all .001s;
+}
+
+#social-git:hover {
     color: #f39c12;
     transition: all .001s;
 }

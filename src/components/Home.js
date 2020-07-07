@@ -1,8 +1,7 @@
 import React, { Component } from 'react'
 import './Home.css'
 import {
-    BrowserRouter as Router,
-    Switch,
+
     Route,
     Link
 } from "react-router-dom";
@@ -12,6 +11,7 @@ class Home extends Component {
         return (
             <Route>
                 <nav className="navbar">
+                <Link to="/">Home</Link>
                 <Link to="Recipes">Recipes</Link>
                 <Link to="NewRecipes">AddRecipe</Link>
                 <Link to="favourite">Favourite</Link>

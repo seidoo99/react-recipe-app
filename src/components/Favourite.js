@@ -1,38 +1,34 @@
 import React, { Component } from 'react'
-import Home from './Home'
-import data from '../reducers/dummyData'
 import {
-    Link
+    BrowserRouter as Route, Link
 } from "react-router-dom";
 import {bindActionCreators} from 'redux'
 import {connect} from 'react-redux'
 import {selectRecipe} from '../actions/action'
 import {removeRecipe} from '../actions/action'
 
-class Favorite extends Component {
-    // constructor(props) {
-    //     super(props)
-    
-    //     this.state = {
-    //          data
-    //     }
-    // }
-    
-    // addToFavorites = () => {
-    //     alert('Add To Favorites')
-    // }
-    
+class Favorite extends Component {   
     render() {
         return (
             <div >
-            <h1>Your selected Items</h1>
-                <Link to='Recipes'>Back To Recipes</Link>
+            <Route>
+                <nav className="navbar">
+                <Link to="/">Home</Link>
+                <Link to="Recipes">Recipes</Link>
+                <Link to="NewRecipes">AddRecipe</Link>
+                <Link to="favourite">Favourite</Link>
+                <Link to="AllRecipe" >Custom Recipes</Link>
+                <Link to="About">about</Link>
+                </nav>
+            </Route>
+                <h1>Your favourite Recipes</h1>
+                <Link to='/'>Back</Link>
                 <ul className="card-deck">
                     {
                         this.props.favorite.map(fav =>
                             <li key={fav.id}>
                                 <div className='card'>
-                                    <a><img className="card-img-top" id='image' src={fav.image} /></a>
+                                    <a href="#"><img className="card-img-top" id='image' alt="" src={fav.image} /></a>
                                     <div className='card-bod'>
                                  <h5 class="card-title">{fav.name}</h5>
                                     </div>

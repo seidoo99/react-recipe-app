@@ -2,7 +2,7 @@ export default function() {
   return [
     {
       name: 'Pumpkin Pie',
-      image: './image/Pumpkin-pie-recipe.jpg',
+      image: '/./image/Pumpkin-pie-recipe.jpg',
       calories:700,
       ingredients: [
         'Pumpkin Puree',
@@ -15,7 +15,7 @@ export default function() {
     },
     {
       name: 'Spaghetti',
-      image:'./image/sphagetti.jpg',
+      image:'/./image/sphagetti.jpg',
       calories:400,
       ingredients: [
         'Noodles',
@@ -26,7 +26,7 @@ export default function() {
     },
     {
       name: 'Onion Pie',
-      image:'./image/Onion-Pie.jpg',
+      image:'/./image/Onion-Pie.jpg',
       calories:800,
       ingredients: [
         'Onion',
@@ -37,7 +37,7 @@ export default function() {
     },
     {
       name: 'Crumb Cake',
-      image: './image/crumbshake.jpg',
+      image: '/./image/crumbshake.jpg',
       calories: 621,
       ingredients: [
         '1 large slice crumb cake',
@@ -49,7 +49,7 @@ export default function() {
     },
     {
       name: 'Grilled Butterflied Chicken',
-      image:'./image/grilledChicken.jpg',
+      image:'/./image/grilledChicken.jpg',
       calories: 2500,
       ingredients: [
         '1 whole chicken, 3 1/2 to 4 pounds',
@@ -59,7 +59,7 @@ export default function() {
     },
     {
       name: 'Chickpea Salad',
-      image:'./image/Onion-Pie.jpg',
+      image:'/./image/Onion-Pie.jpg',
       calories:2458,
       ingredients: [
         '2 teaspoons cumin seeds',
