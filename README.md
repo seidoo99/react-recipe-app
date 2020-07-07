@@ -1,10 +1,12 @@
+## Project Title
 
 react-recipe-app
 
+## Aim of the project 
 An application used manage recipes  built with React, Redux, recat-router  JavaScript,HTML and CSS.
 
 
-## Project Screen Shot(s)
+
 
 
 ## Installation and Setup Instructions
